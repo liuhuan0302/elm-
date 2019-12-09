@@ -1,9 +1,9 @@
-onload = function(){
+window.onload = function(){
     setRem(750);
 }
 
 //浏览器发生变化,重新调整
-onresize = function(){
+window.onresize = function(){
     setRem(750);
 }
 

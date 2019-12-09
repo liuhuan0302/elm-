@@ -1,11 +1,11 @@
 import React,{Component} from "react"
 
-class Header extends Component{
+class Home extends Component{
     render(){
         return(
-            <div>footer</div>
+            <div>Home</div>
         )
     }
 }
 
-export default Header;
+export default Home;
