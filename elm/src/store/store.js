@@ -1,11 +1,6 @@
-import React,{Component} from "react"
+import {createStore,applyMiddleware} from "redux";
+import thunk from "redux-thunk";
+import reducers from "./reducer"
+const store = createStore(reducers,applyMiddleware(thunk))
 
-class Header extends Component{
-    render(){
-        return(
-            <div>footer</div>
-        )
-    }
-}
-
-export default Header;
+export default store;

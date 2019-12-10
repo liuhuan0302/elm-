@@ -1,11 +1,14 @@
-import React, { Component } from 'react'
+import React, { Component ,Fragment} from 'react'
+import {connect} from "react-redux"
 import { Icon } from 'antd'
+import {getHomeBanner} from "../../../service/api"
+import {getHomeList} from "../../../service/api"
+import {getListData} from "../homeReducers/listReducers"
 import "../../../assets/css/home/show.css"
-
 class Show extends Component {
     render() {
         return (
-            <div>
+            <Fragment>
                 <div className="showBox">
                     <div className="top">
                         <Icon type="home" style={{fontSize:"16px",marginLeft:"14px",marginRight:"10px",color:"#999"}} />
@@ -366,9 +369,23 @@ class Show extends Component {
                         </ul>
                     </div>
                 </div>
-            </div>
+            </Fragment>
         )
     }
+    componentDidMount(){
+        getListData();
+        getHomeBanner().then(res=>{
+            // console.log(res)
+        })
+        getHomeList().then(res=>{
+            // console.log(res)
+        })
+    }
 }
-
-export default Show
+const mapStateToprops = (state)=>{
+    console.log(state)
+    return {
+        ListData:state.ListData
+    }
+}
+export default connect(mapStateToprops)(Show)

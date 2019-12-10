@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from "react";
 import { Icon } from 'antd';
-import "../../../assets/css/footer/profileOrder.css"
+import "../../../assets/css//profile/profileOrder.css"
 class ProfileOrder extends Component {
     render() {
         return (

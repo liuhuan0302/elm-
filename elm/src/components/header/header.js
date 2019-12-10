@@ -10,7 +10,7 @@ class Header extends Component{
     }
     render(){
         return(
-            <div>
+            <div style={{height:"47.5px",width:"100%"}}>
                 <div id="header-top">
                     <div className="top-left" onClick={this.handleClick.bind(this)}>
                         <Icon type="search" style={{fontSize:".5rem",color:"#fff"}} />
