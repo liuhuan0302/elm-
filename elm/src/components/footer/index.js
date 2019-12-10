@@ -1,11 +1,16 @@
-import React,{Component} from "react"
-
+import React,{Component,Fragment} from "react"
+import { Form, Icon, Input, Button, Checkbox } from 'antd';
 class Footer extends Component{
     render(){
         return(
-            <div>
-                
-            </div>
+            <Fragment>
+                <ul className="footer">
+                    <li>
+                        <i></i>
+                        <span>外卖</span>
+                    </li>
+                </ul>
+            </Fragment>
         )
     }
 }

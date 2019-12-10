@@ -1,11 +1,13 @@
 import React,{Component} from "react"
-
-class Header extends Component{
+import OrderDeatil from "./children/orderDetail"
+class Order extends Component{
     render(){
         return(
-            <div>footer</div>
+            <div>
+                <OrderDeatil/>
+            </div>
         )
     }
 }
 
-export default Header;
+export default Order;
