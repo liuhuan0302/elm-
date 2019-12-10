@@ -1,0 +1,22 @@
+.box{
+    padding-top: 1.1rem;
+    border-bottom: 0.025rem solid #e4e4e4;
+    height: 3.8rem;
+    display: flex;
+    flex-wrap: wrap;
+    background: #fff;
+}
+.box li{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 25%;
+    height: 30%;
+    padding: 0.3rem 0rem;
+    font-size: 15px;
+}
+.box li img{
+    width: .8rem;
+    height: .8rem;
+    margin-bottom: 5px;
+}

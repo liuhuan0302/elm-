@@ -1,11 +1,5 @@
-import React,{Component} from "react"
+import axios from "axios"
 
-class Header extends Component{
-    render(){
-        return(
-            <div>footer</div>
-        )
-    }
+export const getMocks = () => {
+    return axios.post("/api/mocks")
 }
-
-export default Header;
