@@ -12,7 +12,6 @@ class App extends Component {
           <Route path="/home" render={(routerProps) => <Home {...routerProps} />} />
           {
             mainRouter.map(route=>{
-              console.log(route.pathname)
               return <Route key={route.pathname} path={route.pathname} component={route.component}/>
             })
           }
