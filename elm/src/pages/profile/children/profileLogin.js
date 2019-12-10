@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Icon ,Avatar,} from 'antd';
-import "../../../assets/css/footer/profileLogin.css"
+import "../../../assets/css//profile/profileLogin.css"
 class ProfileLogin extends Component {
     render() {
         return (

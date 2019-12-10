@@ -5,7 +5,7 @@ class Footer extends Component {
     render() {
         return (
             <Fragment>
-                <div className="foot">
+                <div className="foot" >
                     <li>
                             <Icon type="twitter" style={{fontSize:".4rem",color:"gray"}}/>
                             <span>外卖</span>
