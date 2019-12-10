@@ -1,0 +1,41 @@
+input{
+    height:1rem;
+    width:100%;
+    border:none;
+    border-bottom:0.02rem solid #bbb ;
+    padding:0 0.4rem;
+    outline: none;
+}
+button{
+    display: block;
+    height:0.7rem;
+    width:80%;
+    background:#4cd964;
+    color:#fff;
+    margin:0 auto;
+}
+.passWord>.bottomInput{
+    height:1rem;
+    width:100%;
+    margin-bottom:0.5rem;
+  
+}
+.passWord>.bottomInput>.BInput{
+    height:100%;
+    width:60%;
+    float: left;
+}
+aside{
+    padding:0 0.4rem;
+    display: flex;
+    justify-content: space-between;
+    float: right;
+    height:100%;
+    width:40%;
+    
+}
+em{
+    font-size:0.3rem;
+    color:orange;
+    line-height:1rem ;
+}

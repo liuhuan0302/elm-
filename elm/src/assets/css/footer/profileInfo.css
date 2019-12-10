@@ -1,0 +1,25 @@
+.info-data{
+    display: flex;
+    justify-content: space-between;
+    height:1.6rem;
+    width:100%;
+    background: #f5f5f5;
+    margin-bottom: 0.3rem;;
+}
+li{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width:33.4%;
+    height:100%;
+    background:#fff;
+    border-right:0.02rem solid #bbb ;
+}
+span{
+    font-size:0.3rem;
+}
+em{
+    font-size:0.5rem;
+    color:orange;
+}

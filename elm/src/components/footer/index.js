@@ -1,27 +1,13 @@
-import React, { Component, Fragment } from "react"
-import { BrowserRouter, Link, Redirect, Route ,Switch} from "react-router-dom"
-import "../../assets/css/footer/footer.css"
-import { Icon } from "antd"
-class Footer extends Component {
-    render() {
-        return (
+import React,{Component,Fragment} from "react"
+import { Form, Icon, Input, Button, Checkbox } from 'antd';
+class Footer extends Component{
+    render(){
+        return(
             <Fragment>
-                <ul>
+                <ul className="footer">
                     <li>
-                            <Icon type="twitter" style={{fontSize:".4rem",color:"gray"}}/>
-                            <span>外卖</span>
-                    </li>
-                    <li>
-                            <Icon type="search" style={{fontSize:".4rem",color:"gray"}}/>
-                            <span>搜索</span>
-                    </li>
-                    <li>
-                            <Icon type="menu-fold" style={{fontSize:".4rem",color:"gray"}}/>
-                            <span>订单</span>
-                    </li>
-                    <li>
-                            <Icon type="user" style={{fontSize:".4rem",color:"gray"}}/>
-                            <span>我的</span>
+                        <i></i>
+                        <span>外卖</span>
                     </li>
                 </ul>
             </Fragment>

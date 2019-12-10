@@ -1,11 +1,13 @@
 import React,{Component} from "react"
-
-class Header extends Component{
+import LoginConnects from "./children"
+class Login extends Component{
     render(){
         return(
-            <div>footer</div>
+            <div>
+                < LoginConnects/>
+            </div>
         )
     }
 }
 
-export default Header;
+export default Login;
