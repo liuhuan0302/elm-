@@ -1,0 +1,182 @@
+.main{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.contain{
+    overflow: hidden;
+    width: 100%;
+    height: 1.7rem;
+    position: relative;
+}
+.sort_container{
+    position: fixed;
+    top: .88rem;
+    background-color: #fff;
+    border-bottom: 0.01rem solid #f1f1f1;
+    right: 0;
+    width: 100%;
+    display: flex;
+    z-index: 13;
+    overflow: hidden;
+    height: 0.8rem;
+}
+.sort_item{
+    width: 33.3%;
+    color: #444444;
+    text-align: center;
+    height: .64rem ;
+    line-height: .2rem ;
+}
+.sort_item_border{
+    height: .48rem;
+    border-right: 0.05rem solid #e4e4e4;
+    width: 100%;
+    font-size:12px;
+    line-height: 2rem;
+    text-align: center;
+    color: black;
+}
+.last{
+    border: none;
+}
+.txt{
+    display: block;
+    font-size: 12px;
+    line-height: 2;
+}
+.shop_list_container{
+    overflow: hidden;
+    background: #fff;
+    flex: 1;
+    position: relative;
+}
+.shop_list_container>ul{
+    position: absolute;
+    top: 0;
+    left: 0;
+    list-style: none;
+}
+.shopList li {
+    display: flex;
+    border-bottom: 0.025rem solid #f1f1f1;
+    padding: 16px 10px;
+}
+.shopList li img{
+    display: block;
+    width: 1.3rem;
+    height: 1.3rem;
+    margin-right: 0.2rem;
+}
+.right{
+    display: block;
+    flex: auto;
+}
+.right header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.right header h4{
+    font-size: .3rem;
+}
+.right header h4 span{
+    font-size: .2rem;
+    background: yellow;
+    margin-right: 5px;
+}
+.right header .right-ul{
+    display: flex;
+    transform: scale(0.8);
+    margin-right: -5px;
+    color: #999;
+}
+.right header .right-ul li{
+    font-size: 0.3rem;
+    border: 0.025rem solid #f1f1f1;
+    padding: 0 0.04rem;
+    border-radius: 0.08rem;
+    margin-left: 0.05rem;
+}
+.right h5{
+    display: flex;
+    justify-content: space-between;
+    height: 0.3rem;
+    margin-top: 0.15rem;
+}
+.right h5 .h5-sec{
+    display: flex;
+    justify-content: flex-start;
+}
+.right h5 .h5-sec .sec{
+    display: flex;
+}
+.right h5 .h5-sec .sec .xin{
+    position: relative;
+    top: .1rem;
+    width: .8rem;
+    height: 0.2rem;
+}
+.right h5 .h5-sec .sec .xin .sec2{
+    position: absolute;
+    display: flex;
+    width: .8rem;
+    height: 0.2rem;
+    top: -0.02rem;
+    left: -0.02rem;
+}
+.right h5 .h5-sec .sec .sec-span{
+    font-size: 0.1rem;
+    color: #ff6000;
+    margin: 0 0.1rem;
+}
+.right h5 .h5-sec .sec3{
+    transform: scale(0.8);
+    margin-left: -0.1rem;
+    font-size: 0.1rem;
+    color: #666;
+}
+
+.right h5 .sec4{
+    display: flex;
+    align-items: center;
+    transform: scale(0.7);
+    justify-content: flex-end;
+    margin-right: -.28rem;
+}
+.right h5 .sec4 .sn{
+    font-size: 0.25rem;
+    padding: 0.04rem 0.08rem 0;
+    border-radius: 0.08rem;
+    margin-left: 0.08rem;
+}
+.right h5 .sec4 .sn1{
+    color: #fff;
+    background-color: #3190e8;
+    border: 0.025rem solid #3190e8;
+}
+.right h5 .sec4 .sn2{
+    color: #3190e8;
+    border: 0.025rem solid #3190e8;
+}
+
+.right h6{
+    margin-top: 0.2rem;
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.1rem;
+    color: #333;
+}
+.right h6 .fee{
+    transform: scale(0.9);
+    font-size: 0.25rem;
+    color: #666;
+}
+.right h6 .distance_time{
+    font-size: 0.25rem;
+    transform: scale(0.9);
+}
+.right h6 .distance_time .order_time{
+    color: #3190e8;
+}
