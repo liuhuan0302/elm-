@@ -1,0 +1,310 @@
+#root{
+    width: 100%;
+    overflow: hidden;
+}
+.main{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+}
+.top{
+    position: relative;
+    background-color: rgba(119,103,137.43);
+    width: 100%;
+    overflow: hidden;
+    padding: .2rem 0 .2rem .2rem;
+    box-sizing: border-box;
+    display: flex;
+}
+.food_logo{
+    margin-right: .15rem;
+}
+.food_logo img{
+    display: block;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: .07rem;
+}
+/* .food_txt{
+    flex: 1;
+} */
+.food_txt>h4{
+    font-size: 0.4rem;
+    color: #fff;
+    font-weight: bold;
+    width: 100%;
+    margin-bottom: 0.23rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.food_txt>p{
+    font-size: 0.25rem;
+    color: #fff;
+    margin-bottom: 0.23rem;
+}
+.food_txt>span{
+    display: block;
+    font-size: 0.25rem;
+    color: #fff;
+    width: 5.56rem;
+}
+.food_change{
+    display: flex;
+    background-color: #fff;
+    padding: .15rem 0 .3rem;
+    border-bottom: 1px solid #ebebeb;
+}
+.food_change>div{
+    flex:1;
+    text-align: center;
+    line-height: .6rem;
+}
+.food_change>div>span{
+    font-size: 0.32rem;
+    color: #666;
+    padding: .1rem .05rem;
+    border-bottom: 0.06rem solid #fff;
+}
+.food_change>div>span.cli{
+    color: #3190e8;
+    border-color: #3190e8;
+}
+.food_list_box{
+    flex: 1;
+    display: flex;
+
+}
+.food_left{
+    width: 1.9rem;
+    height: 100%;
+    position: relative;
+    overflow-y: scroll;
+    padding-bottom: 1rem;
+}
+.food_left>ul{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+}
+.food_left>ul>li{
+    padding: .35rem .15rem;
+    border-bottom: 0.0125rem solid #ededed;
+    box-sizing: border-box;
+    border-left: 0.075rem solid #f8f8f8;
+    position: relative;
+    background: #F5F5F5;
+}
+.food_left>ul>li.cli{
+    border-left: 0.075rem solid #3190e8;
+    background-color: #fff;
+}
+.food_left>ul>li>span{
+    font-size: 0.3rem;
+    color: #666;
+}
+.food_right{
+    flex: 1;
+    height: 100%;
+    position: relative;
+}
+.food_right>ul{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.food_right>ul>.title{
+    width: 100%;
+    padding: .2rem;
+    position: relative;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    -webkit-align-items: center;
+    align-items: center;
+}
+.food_right>ul>.title>section.nam{
+    width: 5.5rem;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.food_right>ul>.title>section.nam>strong{
+    font-size: 0.35rem;
+    color:black;
+    width: 30%;
+    overflow: hidden;
+    margin-right: .2rem;
+    font-weight: 700;
+}
+.food_right>ul>.title>section.nam>span{
+    font-size: 0.25rem;
+    color: #999;
+    width: 30%;
+    overflow: hidden;
+}
+.food_right>ul>li.cli{
+    background-color: #fff;
+    padding: .3rem .2rem;
+    border-bottom: 1px solid #f8f8f8;
+    position: relative;
+    width: 100%;
+}
+.food_right>ul>li.cli>div{
+    display: flex;
+}
+.food_right>ul>li.cli>div>.food_img{
+    margin-right: .2rem;
+}
+.food_right>ul>li.cli>div>.food_img>img{
+    width: 1rem;
+    height: 1rem;
+    display: block;
+}
+.food_menu{
+    flex: 1;
+}
+.food_menu>h3{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: .1rem;
+    font-size: 0.35rem;
+    font-weight: 700;
+}
+.food_menu>p.num{
+    font-size: 0.25rem;
+    color: #999;
+    line-height: .3rem;
+}
+.food_rating{
+    line-height: .4rem;
+    width: 2.4rem;
+    color: black;
+    display: flex;
+    justify-content: space-between;
+}
+.food_ico{
+    line-height: .2rem;
+}
+.food_ico>span{
+    color: rgb(241, 136, 79);
+    border-color: rgb(240, 115, 115);
+    font-size: .15rem;
+    border: 1px solid currentColor;
+    border-radius: 0.15rem;
+    padding: .04rem;
+    display: inline-block;
+    -webkit-transform: scale(0.8);
+    transform: scale(0.8);
+    margin-left: -0.175rem;
+}
+.food_foot{
+    width: 100%;
+    font-size: 0;
+    margin-top: .15rem;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+}
+.food_foot>section>.item{
+    font-size: 0.25rem;
+    color: #f60;
+    margin-right: .025rem;
+}
+.food_foot>section>.num{
+    font-size: 0.35rem;
+    color: #f60;
+    font-weight: bold;
+    margin-right: .15rem;
+}
+.food_foot>section>.txt{
+    font-size: 0.25rem;
+    color: #666;
+}
+.food_foot>.food_btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.food_foot>.food_btn>span{
+    display: block;
+    font-size: 0.275rem;
+    color: #fff;
+    padding: .05rem .1rem;
+    background-color: #3190e8;
+    border-radius: 0.1rem;
+    border: 1px solid #3190e8;
+}
+.footer{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: #3d3d3f;
+    width: 100%;
+    height: 1rem;
+    display: flex;
+}
+.footer_left{
+    flex: 1;
+    position: relative;
+}
+.footer_left>.cart{
+    background: #3190e8;
+    position: absolute;
+    padding: .2rem;
+    border: 0.09rem solid #444;
+    border-radius: 50%;
+    width: 1rem;
+    height: 1rem;
+    left: .25rem;
+    top: -.35rem
+}
+.footer_left>.cart>span{
+    position: absolute;
+    top: -.125rem;
+    right: -.125rem;
+    background-color: #ff461d;
+    line-height: .35rem;
+    text-align: center;
+    border-radius: 50%;
+    border: 0.0125rem solid #ff461d;
+    min-width: .35rem;
+    height: .35rem;
+    font-size: 0.25rem;
+    color: #fff;
+    font-family: Helvetica Neue,Tahoma,Arial;
+}
+.footer_left>.money{
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    left: 1.75rem;
+}
+.footer_left>.money>.total{
+    font-size: .4rem;
+    font-weight: bold;
+    margin-bottom: .05rem;
+    color: #fff;
+}
+.footer_left>.money>.other{
+    font-size: .2rem;
+    color: #fff;
+}
+.footer_right{
+    background: #4cd964;
+    width: 2.5rem;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: .35rem;
+}
+
