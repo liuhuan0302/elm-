@@ -374,16 +374,9 @@ class Show extends Component {
     }
     componentDidMount(){
         getListData();
-        getHomeBanner().then(res=>{
-            // console.log(res)
-        })
-        getHomeList().then(res=>{
-            // console.log(res)
-        })
     }
 }
 const mapStateToprops = (state)=>{
-    console.log(state)
     return {
         ListData:state.ListData
     }
