@@ -1,6 +1,11 @@
 import React, { Component, Fragment } from "react"
-import "../../assets/css/footer/footer.css"
 import { Icon } from "antd"
+
+import Home from "../../pages/home"
+import Search from "../../pages/search"
+import Profile from "../../pages/profile/profile"
+
+import "../../assets/css/footer/footer.css"
 class Footer extends Component {
     render() {
         return (

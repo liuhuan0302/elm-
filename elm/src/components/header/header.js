@@ -7,6 +7,10 @@ import Search from "../../pages/search"
 class Header extends Component{
     handleClick(){
         console.log(this.props)
+        this.props.history.push("/search")
+    }
+    handleChang(){
+        this.props.history.push("/login")
     }
     render(){
         return(
@@ -16,7 +20,7 @@ class Header extends Component{
                         <Icon type="search" style={{fontSize:".5rem",color:"#fff"}} />
                     </div>
                     <div className="top-content">海淀区中关村-桥西</div>
-                    <div className="top-right">
+                    <div className="top-right" onClick={this.handleChang.bind(this)}>
                         <li>
                             <a>登录|</a>
                         </li>
@@ -30,4 +34,4 @@ class Header extends Component{
     }
 }
 
-export default Header;
+export default withRouter(Header) ;
