@@ -10,7 +10,7 @@ export default (state=defaultState,action)=>{
     switch(action.type){
         case GET_HOME_LIST:
             return {
-                ListData:action.state
+                ListData:action.data
             }
         default:
             return state
@@ -29,8 +29,10 @@ const setListData = (data)=>{
 //请求数据
 export const getListData = ()=>{
     return (dispatch)=>{
-        getHomeList().then(res=>{
+        console.log(1111)
+        getHomeList().then(res=>{ 
             console.log(res)
+           dispatch(setListData(res))
         })
     }
 }

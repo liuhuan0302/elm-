@@ -1,11 +1,11 @@
-import React, { Component } from 'react'
+import React, { Component,Fragment } from 'react'
 import { Carousel } from 'antd' 
 import "../../../assets/css/home/content.css"
 
 class Content extends Component {
     render() {
         return (
-            <div>
+            <Fragment>
                 <Carousel>
                     <div className="box">
                         <li>
@@ -76,7 +76,7 @@ class Content extends Component {
                         </li>
                     </div>
                 </Carousel>
-            </div>
+            </Fragment>
         )
     }
 }
