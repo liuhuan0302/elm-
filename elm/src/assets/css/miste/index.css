@@ -170,11 +170,11 @@
 }
 .right h6 .fee{
     transform: scale(0.9);
-    font-size: 0.25rem;
+    font-size: 0.2rem;
     color: #666;
 }
 .right h6 .distance_time{
-    font-size: 0.25rem;
+    font-size: 0.2rem;
     transform: scale(0.9);
 }
 .right h6 .distance_time .order_time{

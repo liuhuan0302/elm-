@@ -31,6 +31,11 @@ const Forget = Loadable({
     loader:()=>import("./forget/forget"),
     loading:Loading
 })
+// 列表页
+const Miste = Loadable({
+    loader:()=>import("./miste"),
+    loading:Loading
+})
 
 export {
     Home,
@@ -38,5 +43,6 @@ export {
     Order,
     Profile,
     Login,
-    Forget
+    Forget,
+    Miste
 }

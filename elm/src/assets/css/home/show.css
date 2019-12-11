@@ -2,6 +2,7 @@
     margin-top: .2rem;
     border-top: 0.025rem solid #e4e4e4;
     background: #fff;
+    padding-bottom: .5rem;
 }
 .top{
     display: flex;

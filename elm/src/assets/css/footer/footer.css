@@ -1,12 +1,12 @@
 .foot{
     width: 100%;
-    background: red;
     position: fixed;
     height: 1rem;
     bottom: 0;
     left: 0;
     list-style:none;
     display: flex;
+    background: #fff;
 }
 .foot li{
     line-height: 1;
