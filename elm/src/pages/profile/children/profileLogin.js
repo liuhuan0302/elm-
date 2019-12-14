@@ -49,8 +49,7 @@ class ProfileLogin extends Component {
       
         this.setState(_=>{
             this.state.username = userName
-            this.forceUpdate()
-            
+            this.forceUpdate() 
         },_=>{
             console.log(this.state.username)
             this.forceUpdate()

@@ -5,14 +5,18 @@ import { Form, Icon, Input, Button, Checkbox } from 'antd';
 import {getUserInfo} from "../reducer"
 import  "../../../assets/css/login/loginConnect.css"
 class LoginConnect extends Component {
-    handleSubmit = e => {
+    handleSubmit =  e => {
         e.preventDefault();
         this.props.form.validateFields((err, values) => {
             if (!err) {
-                this.props.getUserInfo(values);
+              
+                 this.props.getUserInfo(values)
+                 
                 //但数据调取成功之后,进行页面的跳转
-                this.props.history.push("/profile")
-                // console.log('Received values of form: ', values);
+                setTimeout(_=>{
+                    this.props.history.push("/profile")
+                 },100)
+               
             }
         });
     };

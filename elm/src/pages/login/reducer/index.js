@@ -41,6 +41,18 @@ export const getUserInfo = (userInfo)=>{
             if(userInfo.remember){
                 //如果登录时,用户选择了记住密码,则进行永久存储
                 localStorage.setItem("username",JSON.stringify(res.data.nickname))
+
+
+                // (function fn(cfn){
+                //     localStorage.setItem("username",JSON.stringify(res.data.nickname))
+                //     cfn()
+                // })(cfn)
+                // function cfn(){
+                //     console.log(this)
+                //     window.location.href("http://localhost:3000/profile")
+                // }
+
+               
             }else{
                 sessionStorage.setItem("username",JSON.stringify(res.data.nickname))
             }
