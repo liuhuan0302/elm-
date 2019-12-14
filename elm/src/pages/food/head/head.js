@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
+import {withRouter} from "react-router-dom"
+import axios from "axios"
 import {Icon} from "antd"
-export default class Head extends Component {
+class Head extends Component {
     render() {
         return (
             <div className="top">
@@ -8,12 +10,15 @@ export default class Head extends Component {
                     <img src=""/>
                 </section>
                 <section className="food_txt">
-                    <h4>效果演示</h4>
-                    <p>商家配送／分钟送达／配送费¥5</p>
-                    <span>公告：欢迎光临，用餐高峰请提前下单，谢谢</span>
+                    <h4>{this.props.headData.name}</h4>
+                    <p>商家配送／分钟送达／</p>
+                    <span>公告：{this.props.headData.promotion_info}</span>
                 </section>
                 <Icon type="right" style={{position:"absolute",top:"40%",right:"5%",color:"#fff",height:".14rem"}}/>
             </div>
         )
     }
+    
 }
+
+export default withRouter(Head) 

@@ -1,4 +1,5 @@
 import React, { Component,Fragment } from 'react'
+import axios from "axios"
 import { Carousel } from 'antd' 
 import "../../../assets/css/home/content.css"
 import {getHomeBanner} from "../../../service/api"
@@ -10,11 +11,10 @@ class Content extends Component {
         data2 : []
     }
     getListRequest=()=>{
-        getHomeBanner().then(res=>{
-            console.log(res)
+        axios("/v2/index_entry").then(res=>{
             this.setState({
-                data1 : res.slice(0,8) ,
-                data2 : res.slice(8,16)
+                data1 : res.data.slice(0,8) ,
+                data2 : res.data.slice(8,16)
             })
         })
     }
@@ -28,7 +28,7 @@ class Content extends Component {
                     <div className="box">
                         {
                             this.state.data1.map(item=>{
-                                return  <li>
+                                return  <li key={item.id}>
                                             <img src={item.image_url} />
                                             <p>{item.title}</p>
                                         </li>
@@ -38,7 +38,7 @@ class Content extends Component {
                     <div className="box">
                         {
                             this.state.data2.map(item=>{
-                                return  <li>
+                                return  <li key={item.id}>
                                             <img src={item.image_url} />
                                             <p>{item.title}</p>
                                         </li>

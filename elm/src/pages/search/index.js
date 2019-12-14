@@ -7,10 +7,10 @@ class Search extends Component{
         return(
             <div>
                 <Header />
-                <form className="search_form">
+                <div className="search_form">
                     <input placeholder="请输入商家或美食名称" className="search_input"></input>
                     <button className="search_submit">提交</button>
-                </form>
+                </div>
             </div>
         )
     }

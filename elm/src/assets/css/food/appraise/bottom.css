@@ -1,0 +1,96 @@
+.people{
+    background-color: #fff;
+    padding: 0 .3rem;
+}
+
+.people li{
+    border-top: 1px solid #f1f1f1;
+    display: flex;
+    padding: .3rem 0;
+}
+.people li img{
+    width: .75rem;
+    height: .75rem;
+    border: 0.0125rem;
+    border-radius: 50%;
+    margin-right: .4rem;
+}
+.people li .shuo{
+    flex: 1;
+}
+.people li .shuo .header{
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+    margin-bottom: .15rem;
+}
+.people li .shuo .header .shuoTop{
+    font-size: 0.275rem;
+    color: #666;
+}
+.username{
+    color: #666;
+    margin-bottom: .1rem;
+    margin-bottom: 0;
+}
+.star_desc{
+    display: flex;
+    align-items: center;
+    margin-bottom: 0;
+}
+.xinxin{
+    position: relative;
+    top: .1rem;
+    width: 1rem;
+    height: 0.3rem;
+    flex: 1;
+    overflow-y: hidden;
+    flex-direction: column;
+}
+.xinxin .look{
+    position: absolute;
+    display: flex;
+    width: 1rem;
+    top: 0.1rem;
+}
+.anShi{
+    font-size: 0.275rem;
+    color: #666;
+    margin-left: .075rem;
+}
+.time{
+    font-size: 0.2rem;
+    color: #999;
+}
+.zhaopian{
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: .2rem;
+}
+.zhaopian li{
+    border-top: none;
+    margin: 0;
+}
+.zhaopian li img{
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-right: .2rem;
+    display: block;
+}
+.shuoBottom{
+    display: flex;
+    flex-wrap: wrap;
+}
+.shuoBottom .bottomFood{
+    font-size: 0.275rem;
+    color: #999;
+    width: 1.1rem;
+    padding: .1rem;
+    border: 0.0125rem solid #ebebeb;
+    border-radius: 0.075rem;
+    margin-right: .25rem;
+    margin-bottom: 4px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}

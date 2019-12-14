@@ -1,5 +1,6 @@
 import React, { Component, Fragment } from 'react'
 import { connect } from "react-redux"
+import {withRouter} from "react-router-dom"
 import { Icon } from 'antd'
 import { getListData } from "../homeReducers/listReducers"
 import "../../../assets/css/home/show.css"
@@ -9,18 +10,18 @@ class List extends Component {
         this.state = {
             loading: true,
         }
-
     }
-
+    jumpFood=(id)=>{
+        this.props.history.push(`/home/food/${id}`)
+    }
     render() {
-        console.log(this.props.ListData.ListData)
         if (this.props.ListData.ListData.length) {
             return (
                 <Fragment>
                     {
                         this.props.ListData.ListData.map(item => {
                            return( 
-                           <li key={item.name}>
+                           <li key={item.name} onClick={this.jumpFood.bind(this,item.id)}>
                                 <section>
                                     <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1575907411528&di=74f2cf37a5b9af60d3dac031d1159f81&imgtype=0&src=http%3A%2F%2Fqccdata.qichacha.com%2FAutoImage%2F802b1532a71c3fd0884e753c48b247bb.jpg%3Fx-oss-process%3Dimage%2Fresize%2Cw_120" />
                                 </section>
@@ -41,10 +42,10 @@ class List extends Component {
                                             <section className="sec">
                                                 <div className="xin">
                                                     <section className="sec2">
-                                                        <Icon type="star" style={{ fontSize: ".2rem" }} />
-                                                        <Icon type="star" style={{ fontSize: ".2rem" }} />
-                                                        <Icon type="star" style={{ fontSize: ".2rem" }} />
-                                                        <Icon type="star" style={{ fontSize: ".2rem" }} />
+                                                        <Icon type="star" theme="filled" style={{color:"#f60", fontSize: ".2rem" }} />
+                                                        <Icon type="star" theme="filled" style={{color:"#f60", fontSize: ".2rem" }} />
+                                                        <Icon type="star" theme="filled" style={{color:"#f60", fontSize: ".2rem" }} />
+                                                        <Icon type="star" theme="filled" style={{color:"#f60", fontSize: ".2rem" }} />
                                                     </section>
                                                 </div>
                            <span className="sec-span">{item.rating}</span>
@@ -86,7 +87,6 @@ class List extends Component {
     }
 
     componentDidMount() {
-        console.log(this.props)
         this.props.getListData()
         this.setState({
             loading: false
@@ -100,9 +100,8 @@ class List extends Component {
     }
 }
 const mapStateToProps = (state) => {
-    console.log(state.HomeList)
     return {
         ListData: state.HomeList
     }
 }
-export default connect(mapStateToProps, { getListData })(List)
+export default connect(mapStateToProps, { getListData })(withRouter(List) )

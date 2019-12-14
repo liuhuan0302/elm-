@@ -18,6 +18,7 @@
     padding: .2rem 0 .2rem .2rem;
     box-sizing: border-box;
     display: flex;
+    height: 2.8rem;
 }
 .food_logo{
     margin-right: .15rem;
@@ -76,7 +77,8 @@
 .food_list_box{
     flex: 1;
     display: flex;
-
+    padding-bottom: 1rem;
+    height: 100%;
 }
 .food_left{
     width: 1.9rem;
@@ -111,12 +113,14 @@
     flex: 1;
     height: 100%;
     position: relative;
+    overflow: scroll;
 }
 .food_right>ul{
     width: 100%;
     position: absolute;
     top: 0;
     left: 0;
+    padding-bottom: 1rem;
 }
 .food_right>ul>.title{
     width: 100%;
@@ -177,19 +181,25 @@
     font-weight: 700;
 }
 .food_menu>p.num{
-    font-size: 0.25rem;
+    font-size: 0.3rem;
     color: #999;
     line-height: .3rem;
+    margin-bottom: .1rem;
 }
 .food_rating{
     line-height: .4rem;
-    width: 2.4rem;
+    width: 3rem;
     color: black;
     display: flex;
     justify-content: space-between;
+    margin-bottom: .2rem;
+}
+.food_rating>span{
+    font-size: .25rem;
 }
 .food_ico{
     line-height: .2rem;
+    margin-bottom: .1rem;
 }
 .food_ico>span{
     color: rgb(241, 136, 79);
@@ -206,7 +216,7 @@
 .food_foot{
     width: 100%;
     font-size: 0;
-    margin-top: .15rem;
+    margin-top: .1rem;
     display: -webkit-flex;
     display: flex;
     -webkit-justify-content: space-between;
@@ -308,3 +318,16 @@
     font-size: .35rem;
 }
 
+.ant-menu-item {
+    width:50%;
+    text-align: center;
+}
+#btn{
+    height: 100%;
+}
+.ant-tabs{
+    height: 100%;
+}
+.ant-tabs-content{
+    height: 100%;
+}

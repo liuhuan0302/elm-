@@ -5,7 +5,8 @@ import {
     Profile,
     Login,
     Forget,
-    Miste
+    Miste,
+    Food
 } from "../pages"
 
 //路由表的制作(一级路由)
@@ -28,7 +29,12 @@ export const mainRouter = [{
 },{
     pathname:"/forget",
     component:Forget
+}]
+
+export const homeRouter = [{
+    pathname : "/home/food" ,
+    component : Food
 },{
-    pathname:"/miste",
+    pathname:"/home/miste",
     component:Miste
 }]
