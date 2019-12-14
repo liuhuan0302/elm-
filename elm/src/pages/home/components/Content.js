@@ -11,7 +11,6 @@ class Content extends Component {
     }
     getListRequest=()=>{
         getHomeBanner().then(res=>{
-            console.log(res)
             this.setState({
                 data1 : res.slice(0,8) ,
                 data2 : res.slice(8,16)

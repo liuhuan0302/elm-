@@ -14,10 +14,13 @@
     background: #f2f2f2;
 }
 .search_submit{
+    height:0.6rem;
     width: 77px;
     color: #fff;
     background: #3190e8;
     border-radius: .15rem;
     border: 0.025rem solid #3190e8;
     font-weight: bold;
+    text-align: center;
+    line-height: 0.6rem;
 }

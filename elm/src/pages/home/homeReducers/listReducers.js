@@ -31,7 +31,6 @@ export const getListData = ()=>{
     return (dispatch)=>{
         console.log(1111)
         getHomeList().then(res=>{ 
-            console.log(res)
            dispatch(setListData(res))
         })
     }

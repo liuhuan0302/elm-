@@ -1,16 +1,15 @@
 import React,{Component} from "react"
 import Header from "../../components/header/header"
 import "../../assets/css/search/search.css"
-
+import Footer from "../../components/footer/index"
+import SearchContent from "./searchContent"
 class Search extends Component{
     render(){
         return(
             <div>
                 <Header />
-                <form className="search_form">
-                    <input placeholder="请输入商家或美食名称" className="search_input"></input>
-                    <button className="search_submit">提交</button>
-                </form>
+                <SearchContent/>
+                <Footer/>
             </div>
         )
     }

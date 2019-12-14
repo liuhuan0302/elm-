@@ -14,7 +14,6 @@ class Show extends Component {
                     <div className="shopList">
                         <ul>
                          <List/>
-                           
                         </ul>
                     </div>
                 </div>
