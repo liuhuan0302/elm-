@@ -1,12 +1,22 @@
 import React, { Component, Fragment } from "react"
+import {connect} from "react-redux";
+import {withRouter} from "react-router-dom"
 import { Form, Icon, Input, Button, Checkbox } from 'antd';
+import {getUserInfo} from "../reducer"
 import  "../../../assets/css/login/loginConnect.css"
 class LoginConnect extends Component {
-    handleSubmit = e => {
+    handleSubmit =  e => {
         e.preventDefault();
         this.props.form.validateFields((err, values) => {
             if (!err) {
-                console.log('Received values of form: ', values);
+              
+                 this.props.getUserInfo(values)
+                 
+                //但数据调取成功之后,进行页面的跳转
+                setTimeout(_=>{
+                    this.props.history.push("/profile")
+                 },100)
+               
             }
         });
     };
@@ -14,7 +24,7 @@ class LoginConnect extends Component {
         const { getFieldDecorator } = this.props.form;
         return (
             <Fragment>
-                <Form onSubmit={this.handleSubmit} className="login-form" style={{padding:"10px 20px"}}>
+                <Form onSubmit={this.handleSubmit} className="login-form" style={{padding:"70px 20px"}}>
                     <Form.Item>
                         {getFieldDecorator('username', {
                             rules: [{ required: true, message: 'Please input your username!' }],
@@ -55,4 +65,10 @@ class LoginConnect extends Component {
     }
 }
 const LoginConnects = Form.create({ name: 'normal_login' })(LoginConnect);
-export default LoginConnects;
+
+const mapStateToProps = (state)=>{
+    return {
+        login:state.login
+    }
+}
+export default connect(mapStateToProps,{getUserInfo})(withRouter(LoginConnects));

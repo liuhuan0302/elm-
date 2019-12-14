@@ -8,15 +8,35 @@
     height: .95rem;
     font-size: 0.3rem;
     display: flex;
-    justify-content: space-around;
     line-height: .95rem;
 }
-
+.top-left{
+    height:100%;
+    width:15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+}
 .top-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
     font-size: 0.4rem;
     color: #fff;
+    height:100%;
+    width:60%;
+    
 }
-
+.top-right{
+    height:100%;
+    width:25%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+}
 .top-right li{
     float: left;
 }

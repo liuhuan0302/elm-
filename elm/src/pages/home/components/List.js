@@ -3,27 +3,32 @@ import { connect } from "react-redux"
 import {withRouter} from "react-router-dom"
 import { Icon } from 'antd'
 import { getListData } from "../homeReducers/listReducers"
+import Loading from "../../../components/common/loading"
 import "../../../assets/css/home/show.css"
 class List extends Component {
     constructor(props) {
         super(props)
         this.state = {
             loading: true,
+            imgBaseUrl:'https://elm.cangdu.org/v4/restaurants/img/shop/15c1513a00615.jpg'
         }
     }
     jumpFood=(id)=>{
         this.props.history.push(`/home/food/${id}`)
     }
     render() {
+        console.log(this.props.ListData)
+        // console.log(this.state.imgBaseUrl+this.props.ListData.ListData[0].image_path)
         if (this.props.ListData.ListData.length) {
             return (
                 <Fragment>
                     {
-                        this.props.ListData.ListData.map(item => {
+                        this.props.ListData.ListData.map((item,index) => {
+                            // console.log(this.state.imgBaseUrl + item.image_path)
                            return( 
                            <li key={item.name} onClick={this.jumpFood.bind(this,item.id)}>
                                 <section>
-                                    <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1575907411528&di=74f2cf37a5b9af60d3dac031d1159f81&imgtype=0&src=http%3A%2F%2Fqccdata.qichacha.com%2FAutoImage%2F802b1532a71c3fd0884e753c48b247bb.jpg%3Fx-oss-process%3Dimage%2Fresize%2Cw_120" />
+                                    <img src="{this.state.imgBaseUrl+item.image_path}" />
                                 </section>
                                 <div className="right">
                                     <header>
@@ -66,7 +71,7 @@ class List extends Component {
                                         <p className="distance_time">
                            <span>{item.distance}</span>
                                             <span>/</span>
-                                            <span className="order_time">22小时23分钟</span>
+                           <span className="order_time">{item.order_lead_time}</span>
                                         </p>
                                     </h6>
                                 </div>
@@ -80,13 +85,14 @@ class List extends Component {
             )
         } else {
             return (
-                <div>暂无数据</div>
+                <Loading/>
             )
         }
 
     }
 
     componentDidMount() {
+        // console.log(this.props)
         this.props.getListData()
         this.setState({
             loading: false
