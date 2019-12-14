@@ -36,6 +36,11 @@ const Miste = Loadable({
     loader:()=>import("./miste"),
     loading:Loading
 })
+// food页面
+const Food = Loadable({
+    loader:()=>import("./food/index.js"),
+    loading:Loading
+})
 
 export {
     Home,
@@ -44,5 +49,6 @@ export {
     Profile,
     Login,
     Forget,
-    Miste
+    Miste,
+    Food
 }
